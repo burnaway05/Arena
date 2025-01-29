@@ -105,7 +105,7 @@ namespace MultiFPS
 
             var temp = new GameObject();
 
-            MonoBehaviour playerGameplayInput = temp.AddComponent<PlayerGameplayInput>();
+            MonoBehaviour playerGameplayInput = temp.AddComponent<PlayerInput>();
             MonoBehaviour characterMotor = temp.AddComponent<CharacterMotor>();
             MonoBehaviour characterInstance = temp.AddComponent<CharacterInstance>();
             MonoBehaviour modelSticker = temp.AddComponent<ModelSticker>();

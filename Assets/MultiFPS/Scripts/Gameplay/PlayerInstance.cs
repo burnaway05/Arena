@@ -386,10 +386,10 @@ namespace MultiFPS.Gameplay
             if(!isServer)
                 WritePlayerData(clientData, team, _charNetIdentity);
 
-            if (_charNetIdentity && isOwned) 
-            {
-                PlayerGameplayInput.Instance.AssignCharacterToBeControlledByPlayer(_charNetIdentity.GetComponent<CharacterInstance>());
-            }
+            //if (_charNetIdentity && isOwned) 
+            //{
+            //    PlayerInput.Instance.SetCharacter(_charNetIdentity.GetComponent<CharacterInstance>());
+            //}
 
             //RegisterPlayerInstance();
         }
@@ -451,7 +451,7 @@ namespace MultiFPS.Gameplay
             ClientFrontend.SetOwnedCharacter(character);
             ClientFrontend.SetObservedCharacter(character);
 
-            PlayerGameplayInput.Instance.AssignCharacterToBeControlledByPlayer(character);
+            //PlayerInput.Instance.SetCharacter(character);
         }
 
         //launched by UI

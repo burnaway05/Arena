@@ -163,6 +163,7 @@ namespace MultiFPS.Gameplay {
 
             //SetFppPerspective(false);
         }
+
         protected override void Start()
         {
             base.Start();
@@ -185,7 +186,7 @@ namespace MultiFPS.Gameplay {
             gameObject.layer = 6; //setting apppropriate layer for character collisions
             GameManager.SetLayerRecursively(CharacterAnimator.gameObject, 8);
 
-            PlayerGameplayInput.Instance.AssignCharacterToBeControlledByPlayer(this);
+            PlayerInput.Instance.SetCharacter(this);
             //ObserveCharacter(isOwned);
 
             //if (isServer)
@@ -235,15 +236,13 @@ namespace MultiFPS.Gameplay {
                 // CharacterParent.position = positionForThisFrame;
 
                 //if (isOwned || isServer && BOT)
-                //{
-                //    lookInput.x = Mathf.Clamp(lookInput.x, -90f, 90f);
-                //
-                //    //rotate character based on player mouse input/bot input
-                //    if (CurrentHealth > 0)
-                //        transform.rotation = Quaternion.Euler(0, lookInput.y, 0);
-                //    //rotate camera based on player mouse input/bot input
-                //    FPPLook.localRotation = Quaternion.Euler(lookInput.x, 0, 0);
-                //}
+                {
+                    lookInput.x = Mathf.Clamp(lookInput.x, -90f, 90f);
+
+                    transform.rotation = Quaternion.Euler(0, lookInput.y, 0);
+                    //rotate camera based on player mouse input/bot input
+                    FPPLook.localRotation = Quaternion.Euler(lookInput.x, 0, 0);
+                }
                 //else
                 //{
                 //    FPPLook.transform.localRotation = Quaternion.Lerp(FPPLook.transform.localRotation, Quaternion.Euler(_currentRotationTargetX, 0, 0), percentage);
