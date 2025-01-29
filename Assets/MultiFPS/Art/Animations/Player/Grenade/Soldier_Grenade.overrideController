@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Soldier_Grenade
+  m_Controller: {fileID: 9100000, guid: 5a3e10f6cb0f89e46a5a7797005adff9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -996568577553130284, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: 5203718075797367454, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: 2836621793110387615, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: -3146136074776943576, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: -8111700494672503290, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: -597281440330448246, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: -6736841137094977281, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: -2367526242480969731, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: -8165318242993314337, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: -5213180518069017227, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: 3533924664996139038, guid: 84294d32d2ed624469437ba1326e5468, type: 3}
+    m_OverrideClip: {fileID: 8873927309315582664, guid: 7410ecef6929ef4499664b43417ad205, type: 3}
+  - m_OriginalClip: {fileID: -336439004574748631, guid: cf75b87ee69f3e549955e5498393288b, type: 3}
+    m_OverrideClip: {fileID: 5203718075797367454, guid: 7410ecef6929ef4499664b43417ad205, type: 3}

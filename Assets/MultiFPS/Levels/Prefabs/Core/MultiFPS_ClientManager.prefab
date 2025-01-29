@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5546447072185059300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5546447072185059301}
+  - component: {fileID: 5546447072185059298}
+  - component: {fileID: 5546447072185059299}
+  - component: {fileID: 5546447072185059296}
+  - component: {fileID: 9099523800816714024}
+  m_Layer: 0
+  m_Name: MultiFPS_ClientManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5546447072185059301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546447072185059300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5546447072185059298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546447072185059300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb2254d2f7eae248b04afb455439d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenuUI: {fileID: 4783625825972539628, guid: b28228c791ac49a48ac1284e3d9611b4, type: 3}
+  ChatUI: {fileID: 1543277760615274387, guid: fba92db874c90ca46b160dd11f74e073, type: 3}
+  ScoreboardUI: {fileID: 2055013005044570978, guid: ea3145a7e6496f244aac064cd4a3c6cc, type: 3}
+  KillfeedUI: {fileID: 1211888550273447707, guid: c0c7c3a079bf94041984fa69add95cdc, type: 3}
+  PlayerHudUI: {fileID: 2873550053378021852, guid: de86a87596874de4e9a8b16ece9392c6, type: 3}
+  GameplayCamera: {fileID: 3093927407897142571, guid: 04e87735fbc680f47903ef1b2d31652c, type: 3}
+  UIColorSet: {fileID: 11400000, guid: 4f269a18bf5e87c40af90cdf648fc536, type: 2}
+  characterSkins:
+  - {fileID: 11400000, guid: f47845153053c5349af9dd2a831935c9, type: 2}
+  - {fileID: 11400000, guid: 226d0caf1bb3dcd4dbebaeba63e75f54, type: 2}
+  - {fileID: 11400000, guid: 3531b0ebf159afb42a56f93a4dd9c989, type: 2}
+  - {fileID: 11400000, guid: 1bfac2f51cf27c048874e3fe9be0d851, type: 2}
+  - {fileID: 11400000, guid: 84022460616cde54bac51629b2d6e0ec, type: 2}
+  ItemSkinContainers:
+  - ItemName: Pistol
+    Skins:
+    - SkinName: PurpleBluePaint
+      Skin: {fileID: 2100000, guid: d808a887203ca5c438daf55b04b7bf63, type: 2}
+    - SkinName: Yellow
+      Skin: {fileID: 2100000, guid: f3023208c7e4d524fb4c8e476f041b79, type: 2}
+  - ItemName: Rifle
+    Skins:
+    - SkinName: LightGreen
+      Skin: {fileID: 2100000, guid: 68bb286670d8bcc4b88706581460dcfe, type: 2}
+    - SkinName: PinkCrystal
+      Skin: {fileID: 2100000, guid: 3c38861ca026a454793e0a19fc3c7b12, type: 2}
+    - SkinName: FullBlack
+      Skin: {fileID: 2100000, guid: 1996a185362b1cc4c901df10ef3934ec, type: 2}
+  - ItemName: Shotgun
+    Skins:
+    - SkinName: Fire
+      Skin: {fileID: 2100000, guid: 353ded07d7e20be42b590fe1b2572782, type: 2}
+  PlayerNametag: {fileID: 2073142684455291202, guid: 65d6ce764904a5d42bb812fec5b3e2b7, type: 3}
+--- !u!114 &5546447072185059299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546447072185059300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b38b48400a4d94aa6fbefccf544362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pools:
+  - PoolFamilyName: Bullets
+    pools:
+    - PoolName: Regular
+      PoolPrefab: {fileID: 6905933170574764908, guid: 035b74b2a30434e4bace3c53972fde9b, type: 3}
+      NumberOfObjects: 50
+      ObjectsInPool: []
+    - PoolName: SniperRifle
+      PoolPrefab: {fileID: 6905933170574764908, guid: 31a4bfb5c793f4045a045b0a002c686a, type: 3}
+      NumberOfObjects: 6
+      ObjectsInPool: []
+  - PoolFamilyName: Impacts
+    pools:
+    - PoolName: Metal
+      PoolPrefab: {fileID: 7330437426433277086, guid: d62b9105fa6968f42adb086c7e7c0dea, type: 3}
+      NumberOfObjects: 30
+      ObjectsInPool: []
+    - PoolName: Flesh
+      PoolPrefab: {fileID: 5325220062336538107, guid: 794a8519cc686ef4da4b6012e4dfaee7, type: 3}
+      NumberOfObjects: 15
+      ObjectsInPool: []
+  - PoolFamilyName: Effects
+    pools:
+    - PoolName: HeadShot
+      PoolPrefab: {fileID: 968750111475089187, guid: 476e07db43794cb469f4a61c2c249133, type: 3}
+      NumberOfObjects: 5
+      ObjectsInPool: []
+    - PoolName: NeckBlood
+      PoolPrefab: {fileID: 8220033396819657266, guid: ca0c9e4fe6a0d6c41b85b798aef71c1e, type: 3}
+      NumberOfObjects: 5
+      ObjectsInPool: []
+    - PoolName: HeadExplosion
+      PoolPrefab: {fileID: 1090346678005606909, guid: a792fee1a0e011540b327ea947ea9878, type: 3}
+      NumberOfObjects: 5
+      ObjectsInPool: []
+--- !u!114 &5546447072185059296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546447072185059300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231dc6935180d5c4e937d0ecf9bfbee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9099523800816714024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546447072185059300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c6af7ecdbaf0248a462f5f2267bb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

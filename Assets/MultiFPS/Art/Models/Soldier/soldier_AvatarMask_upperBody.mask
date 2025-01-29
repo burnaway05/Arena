@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: soldier_AvatarMask_upperBody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: mesh_Soldier
+    m_Weight: 0
+  - m_Path: rig_soldier
+    m_Weight: 0
+  - m_Path: rig_soldier/parent
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/IKRoot
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/neck
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/neck/head
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/neck/head/head_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_index1.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_index1.R/f_index2.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_index1.R/f_index2.R/f_index3.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_index1.R/f_index2.R/f_index3.R/f_index3.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_little1.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_little1.L/f_little2.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_little1.L/f_little2.L/f_little3.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_little1.L/f_little2.L/f_little3.L/f_little3.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_middle1.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_middle1.L/f_middle2.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_middle1.L/f_middle2.L/f_middle3.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_middle1.L/f_middle2.L/f_middle3.L/f_middle3.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_ring1.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_ring1.R/f_ring2.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_ring1.R/f_ring2.R/f_ring3.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_ring1.R/f_ring2.R/f_ring3.R/f_ring3.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_thumb1.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_thumb1.L/f_thumb2.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_thumb1.L/f_thumb2.L/f_thumb3.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/f_thumb1.L/f_thumb2.L/f_thumb3.L/f_thumb3.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/itemSticker.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.L/upperArm.L/lowerArm.L/hand.L/itemSticker.L/itemSticker.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_index1.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_index1.L/f_index2.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_index1.L/f_index2.L/f_index3.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_index1.L/f_index2.L/f_index3.L/f_index3.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_little1.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_little1.R/f_little2.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_little1.R/f_little2.R/f_little3.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_little1.R/f_little2.R/f_little3.R/f_little3.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_middle1.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_middle1.R/f_middle2.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_middle1.R/f_middle2.R/f_middle3.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_middle1.R/f_middle2.R/f_middle3.R/f_middle3.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_ring1.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_ring1.L/f_ring2.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_ring1.L/f_ring2.L/f_ring3.L
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_ring1.L/f_ring2.L/f_ring3.L/f_ring3.L_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_thumb1.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_thumb1.R/f_thumb2.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_thumb1.R/f_thumb2.R/f_thumb3.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/f_thumb1.R/f_thumb2.R/f_thumb3.R/f_thumb3.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/itemSticker.R
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/IKRoot/spine/chest/shoulder.R/upperArm.R/lowerArm.R/hand.R/itemSticker.R/itemSticker.R_end
+    m_Weight: 1
+  - m_Path: rig_soldier/parent/hips/upperLeg.L
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.L/lowerLeg.L
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.L/lowerLeg.L/foot.L
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.L/lowerLeg.L/foot.L/toe.L
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.L/lowerLeg.L/foot.L/toe.L/toe.L_end
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.R
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.R/lowerLeg.R
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.R/lowerLeg.R/foot.R
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.R/lowerLeg.R/foot.R/toe.R
+    m_Weight: 0
+  - m_Path: rig_soldier/parent/hips/upperLeg.R/lowerLeg.R/foot.R/toe.R/toe.R_end
+    m_Weight: 0

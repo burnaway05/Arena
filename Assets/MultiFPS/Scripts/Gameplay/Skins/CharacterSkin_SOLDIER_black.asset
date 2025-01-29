@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d4a85a73807a243bad2650e9490d15, type: 3}
+  m_Name: CharacterSkin_SOLDIER_black
+  m_EditorClassIdentifier: 
+  SkinName: SOLDIER
+  Mesh: {fileID: -4214021686595859913, guid: 257d2e8ae375d9249a93f8856c423e68, type: 3}
+  Material: {fileID: 2100000, guid: 8636b9b8470531f4fbaf953eefd29913, type: 2}
+  FPP_Mesh: {fileID: 5879972497300055999, guid: 07504123bc274f34b9338e37e238f6db, type: 3}
+  FPP_Material: {fileID: 2100000, guid: 4d6d006d4bac02e4c94f7e58682acfb6, type: 2}

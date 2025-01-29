@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 05fd5e4d4586b3345ad4ba1801271342
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -4653087623690782335
+    second: rig_soldier|1BASE
+  - first:
+      74: -2855765896087997547
+    second: rig_soldier|armed_notGrounded
+  - first:
+      74: -2665530852615750533
+    second: rig_soldier|armed_walk_backward
+  - first:
+      74: 5056122479390858819
+    second: rig_soldier|armed_walk_BL
+  - first:
+      74: -8509538328476488067
+    second: rig_soldier|armed_walk_BR
+  - first:
+      74: -7704035085431967713
+    second: rig_soldier|armed_walk_FL
+  - first:
+      74: -7143060539948949776
+    second: rig_soldier|armed_walk_forward
+  - first:
+      74: 5706029008905775296
+    second: rig_soldier|armed_walk_FR
+  - first:
+      74: -5010196854395619884
+    second: rig_soldier|armed_walk_left
+  - first:
+      74: 7904320062336307455
+    second: rig_soldier|armed_walk_right
+  - first:
+      74: 2836621793110387615
+    second: rig_soldier|emptyHanded
+  - first:
+      74: -8111700494672503290
+    second: rig_soldier|emptyHanded_90
+  - first:
+      74: -329975864284140044
+    second: rig_soldier|emptyHanded_equip
+  - first:
+      74: -6736841137094977281
+    second: rig_soldier|emptyHanded_M90
+  - first:
+      74: -7770750631394395458
+    second: rig_soldier|emptyHanded_run_FL
+  - first:
+      74: -4139007199971758218
+    second: rig_soldier|emptyHanded_run_forward
+  - first:
+      74: -8342771703901642466
+    second: rig_soldier|emptyHanded_run_FR
+  - first:
+      74: -3871917411144726709
+    second: rig_soldier|granade_idle
+  - first:
+      74: 8851881654734714193
+    second: rig_soldier|granade_idle_90
+  - first:
+      74: -6536672214829270876
+    second: rig_soldier|granade_idle_M90
+  - first:
+      74: 1474349913676340357
+    second: rig_soldier|granade_throw
+  - first:
+      74: 3533924664996139038
+    second: rig_soldier|item_equip
+  - first:
+      74: 7602469796653308792
+    second: rig_soldier|pistol_idle
+  - first:
+      74: -1469885272395267874
+    second: rig_soldier|pistol_idle90
+  - first:
+      74: -4421354249826500185
+    second: rig_soldier|pistol_idleM90
+  - first:
+      74: -996568577553130284
+    second: rig_soldier|pistol_reload
+  - first:
+      74: 2019812448147312887
+    second: rig_soldier|PoseLib
+  - first:
+      74: 7920352623260606938
+    second: rig_soldier|rifle_idle
+  - first:
+      74: -540967847190520683
+    second: rig_soldier|rifle_idle_90
+  - first:
+      74: 4814752841885740021
+    second: rig_soldier|rifle_idle_M90
+  - first:
+      74: -679081522130536698
+    second: rig_soldier|rifle_jump
+  - first:
+      74: -5502171956786970438
+    second: rig_soldier|rifle_run_FL
+  - first:
+      74: 6356929256211846617
+    second: rig_soldier|rifle_run_forward
+  - first:
+      74: 3063238533347818087
+    second: rig_soldier|rifle_run_FR
+  - first:
+      74: -2963053431106437820
+    second: rig_soldier|run_forward
+  - first:
+      74: -3043935343160721512
+    second: rig_soldier|sword_attack1
+  - first:
+      74: 3147171787404720356
+    second: rig_soldier|sword_attack2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_automata.001
+    second: {fileID: 2100000, guid: 963f8a867afbf4d4cbe4ea1f1a0b1a4e, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

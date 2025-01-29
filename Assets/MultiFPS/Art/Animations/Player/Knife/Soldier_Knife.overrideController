@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Soldier_Knife
+  m_Controller: {fileID: 9100000, guid: 5a3e10f6cb0f89e46a5a7797005adff9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -3117969423331155134, guid: ef27cf6161aea6f4f9c81c2d35a8c92f, type: 3}
+    m_OverrideClip: {fileID: 3533924664996139038, guid: cf75b87ee69f3e549955e5498393288b, type: 3}
+  - m_OriginalClip: {fileID: 242995123479737667, guid: ef27cf6161aea6f4f9c81c2d35a8c92f, type: 3}
+    m_OverrideClip: {fileID: -1318159329171817067, guid: cf75b87ee69f3e549955e5498393288b, type: 3}
+  - m_OriginalClip: {fileID: 2053499318800464976, guid: ef27cf6161aea6f4f9c81c2d35a8c92f, type: 3}
+    m_OverrideClip: {fileID: -7107753643862074948, guid: cf75b87ee69f3e549955e5498393288b, type: 3}
+  - m_OriginalClip: {fileID: -2136963150245732362, guid: ef27cf6161aea6f4f9c81c2d35a8c92f, type: 3}
+    m_OverrideClip: {fileID: -7665518198936944740, guid: cf75b87ee69f3e549955e5498393288b, type: 3}
