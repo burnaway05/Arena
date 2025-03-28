@@ -645,7 +645,7 @@ namespace MultiFPS.Gameplay
             //    DestroyCoroutine = StartCoroutine(CountToDestroy());
             //}
 
-            _networkTransform.enabled = true;
+            //_networkTransform.enabled = true;
         }
 
 
