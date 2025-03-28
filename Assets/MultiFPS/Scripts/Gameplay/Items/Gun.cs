@@ -61,7 +61,7 @@ namespace MultiFPS.Gameplay
             base.FixedUpdate();
             if (!CanBeUsed()) return;
 
-            if (!isServer) return;
+            //if (!isServer) return;
 
             if (Server_CurrentAmmo <= 0 && Server_CurrentAmmoSupply > 0 && !_server_isReloading)
                 PushReload(); //set _reloadTrigger to true
@@ -75,13 +75,6 @@ namespace MultiFPS.Gameplay
             base.Take();
             _firePoint = _myOwner.characterFirePoint;
             UpdateAmmoInHud(CurrentAmmo.ToString(), CurrentAmmoSupply.ToString());
-
-            //if previous weapons was scoping then we want to reset visual side of that for newly taken item
-            if (_myOwner.FPP)
-            {
-                Camera _fppCamera = GameplayCamera._instance.FPPCamera;
-                _fppCamera.transform.localPosition = Vector3.zero;
-            }
         }
 
         public override void PutDown()
@@ -92,8 +85,8 @@ namespace MultiFPS.Gameplay
             //to properly cancel that procedure
             CancelReloading();
 
-            if (isServer)
-                ServerCancelReloading();
+            //if (isServer)
+            //    ServerCancelReloading();
         }
 
         protected override void SingleUse()
@@ -118,24 +111,24 @@ namespace MultiFPS.Gameplay
             HitscanFireInfo fire = FireHitscan();
 
 
-            if (isOwned)
-                Shoot(fire);
+            //if (isOwned)
+            Shoot(fire);
 
             //bots
-            if (isServer)
-            {
-                Server_CurrentAmmo--;
-                RpcShoot(fire);
-            }
-            else //clients
-            {
-                CmdShoot(fire);
-            }
+            //if (isServer)
+            //{
+            //    Server_CurrentAmmo--;
+            //    RpcShoot(fire);
+            //}
+            //else //clients
+            //{
+            //    CmdShoot(fire);
+            //}
 
             ChangeCurrentAmmoCount(CurrentAmmo - 1);
         }
 
-        [Command]
+        //[Command]
         protected void CmdShoot(HitscanFireInfo info)
         {
             if (Server_CurrentAmmo > 0)
@@ -144,15 +137,15 @@ namespace MultiFPS.Gameplay
                 RpcShoot(info);
             }
         }
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         protected void RpcShoot(HitscanFireInfo info)
         {
             if (_myOwner)
             {
                 Shoot(info);
 
-                if (!isServer)
-                    ChangeCurrentAmmoCount(CurrentAmmo-1);
+                //if (!isServer)
+                //    ChangeCurrentAmmoCount(CurrentAmmo-1);
             }
         }
 
@@ -198,7 +191,7 @@ namespace MultiFPS.Gameplay
             if(Server_CurrentAmmo < MagazineCapacity)
                 _reloadTrigger = true;
 
-            if (isOwned)
+            //if (isOwned)
                 CmdClientRequestReload();
         }
 
@@ -248,7 +241,7 @@ namespace MultiFPS.Gameplay
             }
         }
 
-        [Command]
+        //[Command]
         void CmdClientRequestReload() 
         {
             if (Server_CurrentAmmo < MagazineCapacity)
@@ -292,7 +285,7 @@ namespace MultiFPS.Gameplay
             }
         }
 
-        [ClientRpc]
+        //[ClientRpc]
         protected void ServerFinishClientReload() 
         {
             if(currentlyInUse && _isReloading)
@@ -313,14 +306,14 @@ namespace MultiFPS.Gameplay
             RpcEndReload(currentAmmo, supplyAmmo);
         }
 
-        [ClientRpc]
+        //[ClientRpc]
         void RpcEndReload(int currentAmmo, int supplyAmmo) 
         {
             CurrentAmmoSupply = supplyAmmo;
             ChangeCurrentAmmoCount(currentAmmo);
         }
 
-        [ClientRpc]
+        //[ClientRpc]
         protected void RpcReload() 
         {
             if(_myOwner)

@@ -39,7 +39,7 @@ namespace MultiFPS.Gameplay {
 
             if (!_myOwner) return;
 
-            if (!isServer) return;
+            //if (!isServer) return;
 
             if (_isPlanting && (!_myOwner.ReadActionKeyCode(ActionCodes.Trigger1) || !Defuse.Instance.BombCanBePlanted(_myOwner)))
             {
@@ -49,7 +49,7 @@ namespace MultiFPS.Gameplay {
             }
         }
 
-        [Command]
+        //[Command]
         protected override void CmdSingleUse()
         {
             base.CmdSingleUse();
@@ -114,8 +114,8 @@ namespace MultiFPS.Gameplay {
         {
             base.Take();
 
-            if (TeamOwnership == 0 && isServer)
-                Defuse.Instance.BombDefused();
+            //if (TeamOwnership == 0 && isServer)
+            //    Defuse.Instance.BombDefused();
         }
 
         public override void PutDown()

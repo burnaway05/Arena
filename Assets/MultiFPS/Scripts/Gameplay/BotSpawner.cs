@@ -36,7 +36,7 @@ namespace MultiFPS
             PlayerInstance ourBot = GameManager.Gamemode.SpawnBot(Team);
 
 
-            ourBot.SetItemsOnSpawn(ItemsOnSpawn);
+            //ourBot.SetItemsOnSpawn(ItemsOnSpawn);
             _spawnedBot = true;
             /* if (_mySpawnedObject)
                  return;

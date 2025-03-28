@@ -22,9 +22,6 @@ namespace MultiFPS
 
         void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
         {
-            //spawn pools for maps
-            if (SceneManager.GetActiveScene().buildIndex == 0) return;
-
             for (int familyID = 0; familyID < _pools.Length; familyID++)
             {
                 PoolFamily family = _pools[familyID];

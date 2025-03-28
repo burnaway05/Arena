@@ -32,8 +32,6 @@ namespace MultiFPS.UI
 
             for (int i = 0; i < slotCount; i++)
             {
-                if (characterItemManager.Slots[i].SpecificItemOnly != string.Empty) continue;
-
                 PlayerLodoutSingleSlot plss = Instantiate(_playerSlotPrefab, _gridParent).GetComponent<PlayerLodoutSingleSlot>();
                 plss.Draw(characterItemManager.Slots[i], i);
                 plss.OnItemSelected(0);

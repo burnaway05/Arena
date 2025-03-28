@@ -28,18 +28,18 @@ namespace MultiFPS.Gameplay
             if (!_myOwner.BOT)
                 SecondaryMelee();
 
-            if (isServer)
-                RpcSecondaryMeelee();
-            else
-                CmdSeconadaryMelee();
+            //if (isServer)
+            //    RpcSecondaryMeelee();
+            //else
+            //    CmdSeconadaryMelee();
         }
 
-        [Command]
+        //[Command]
         void CmdSeconadaryMelee()
         {
             RpcSecondaryMeelee();
         }
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         void RpcSecondaryMeelee()
         {
             SecondaryMelee();
@@ -52,27 +52,27 @@ namespace MultiFPS.Gameplay
             if (_myOwner.IsObserved)
                 _myOwner.PlayerRecoil.Recoil(-4f, -4f, 6, 0.15f);
 
-            if (isOwned || (isServer&&_myOwner.BOT))
-            {
-                Collider[] collider = GetHealthsInMeleeRange();
-
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    Collider col = collider[i];
-                    if (col.transform.root != _myOwner.transform.root)
-                    {
-                        Health victim = col.GetComponent<Health>();
-                        if (victim)
-                        {
-                            //if (isOwned)
-                            //    CmdSecondaryMeleeDamage(victim);
-                            //else
-                                ServerSecondaryMeleeDamage(victim);
-                            break;
-                        }
-                    }
-                }
-            }
+            //if (isOwned || (isServer&&_myOwner.BOT))
+            //{
+            //    Collider[] collider = GetHealthsInMeleeRange();
+            //
+            //    for (int i = 0; i < collider.Length; i++)
+            //    {
+            //        Collider col = collider[i];
+            //        if (col.transform.root != _myOwner.transform.root)
+            //        {
+            //            Health victim = col.GetComponent<Health>();
+            //            if (victim)
+            //            {
+            //                //if (isOwned)
+            //                //    CmdSecondaryMeleeDamage(victim);
+            //                //else
+            //                    ServerSecondaryMeleeDamage(victim);
+            //                break;
+            //            }
+            //        }
+            //    }
+            //}
         }
         //[Command]
         //void CmdSecondaryMeleeDamage(Health health)

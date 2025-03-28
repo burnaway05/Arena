@@ -33,11 +33,9 @@ namespace MultiFPS.Gameplay
         [HideInInspector] public bool SpawnCooldown = true;
 
         [HideInInspector] public CharacterInstance MyCharacter;
-        [HideInInspector] public CharacterInstance MyControlledCharacter;
 
         #region bot related variables
         public bool BOT { private set; get; } = false;
-        GameObject[] _itemsOnSpawn;
         #endregion
 
         public delegate void OnReceivedTeamResponse(int team, int permissionCode);
@@ -163,15 +161,6 @@ namespace MultiFPS.Gameplay
             BOT = true;
         }
 
-        /// <summary>
-        /// Normally character inventory is set based on player setting, but we can also force players to spawn with specific items
-        /// This is useful for gamemodes where we want players to use one specyfic weapon, and this method is exactly for setting that
-        /// </summary>
-        public void SetItemsOnSpawn(GameObject[] itemsOnSpawn) 
-        {
-            _itemsOnSpawn = itemsOnSpawn;
-        }
-
         #region spawn requests
         [Command]
         void CmdProcessSpawnRequest()
@@ -225,33 +214,33 @@ namespace MultiFPS.Gameplay
             }
 
             //if special eq is require, ignore player preferences and set items
-            if (_itemsOnSpawn != null && _itemsOnSpawn.Length > 0)
-            {
-                for (int i = 0; i < characterItemManager.Slots.Count; i++)
-                {
-                    if (_itemsOnSpawn.Length <= i)
-                    {
-                        characterItemManager.Slots[i].ItemOnSpawn = null; //we must also clear all default slots!
-                        continue;
-                    }
-                    characterItemManager.Slots[i].ItemOnSpawn = _itemsOnSpawn[i] ? _itemsOnSpawn[i].gameObject : null;
-                }
-            }
-            else
-            {
-                //if no special equipment is required just spawn character with items that player wants
-                for (int i = 0; i < PlayerInfo.Lodout.Length; i++)
-                {
-                    
-                    if (PlayerInfo.Lodout[i] < 0) continue;
-
-                    if (i >= characterItemManager.Slots.Count) break;
-
-                    if (i >= ItemManager.Instance.SlotsLodout[i].availableItemsForSlot.Length) continue;
-
-                    characterItemManager.Slots[i].ItemOnSpawn = ItemManager.Instance.SlotsLodout[i].availableItemsForSlot[PlayerInfo.Lodout[i]].gameObject;
-                }
-            }
+            //if (_itemsOnSpawn != null && _itemsOnSpawn.Length > 0)
+            //{
+            //    for (int i = 0; i < characterItemManager.Slots.Count; i++)
+            //    {
+            //        if (_itemsOnSpawn.Length <= i)
+            //        {
+            //            characterItemManager.Slots[i].ItemOnSpawn = null; //we must also clear all default slots!
+            //            continue;
+            //        }
+            //        characterItemManager.Slots[i].ItemOnSpawn = _itemsOnSpawn[i] ? _itemsOnSpawn[i].gameObject : null;
+            //    }
+            //}
+            //else
+            //{
+            //    //if no special equipment is required just spawn character with items that player wants
+            //    for (int i = 0; i < PlayerInfo.Lodout.Length; i++)
+            //    {
+            //        
+            //        if (PlayerInfo.Lodout[i] < 0) continue;
+            //
+            //        if (i >= characterItemManager.Slots.Count) break;
+            //
+            //        if (i >= ItemManager.Instance.SlotsLodout[i].availableItemsForSlot.Length) continue;
+            //
+            //        characterItemManager.Slots[i].ItemOnSpawn = ItemManager.Instance.SlotsLodout[i].availableItemsForSlot[PlayerInfo.Lodout[i]].gameObject;
+            //    }
+            //}
 
             NetworkServer.Spawn(MyCharacter.gameObject, connectionToClient);
 

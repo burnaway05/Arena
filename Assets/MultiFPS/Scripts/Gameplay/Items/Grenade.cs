@@ -24,19 +24,19 @@ namespace MultiFPS.Gameplay
 
             base.Use();
 
-            if (isServer)
-                SpawnThrowable();
-            else
-            {
-                CmdSpawnThrowable();
-
-                CurrentAmmoSupply--;
-                ChangeCurrentAmmoCount(CurrentAmmoSupply);
-            }
+            //if (isServer)
+            //    SpawnThrowable();
+            //else
+            //{
+            //    CmdSpawnThrowable();
+            //
+            //    CurrentAmmoSupply--;
+            //    ChangeCurrentAmmoCount(CurrentAmmoSupply);
+            //}
 
             if (CurrentAmmoSupply <= 0) _myOwner.CharacterItemManager.ChangeItemDelay(-1, 0.45f);
         }
-        [Command]
+        //[Command]
         void CmdSpawnThrowable() 
         {
             SpawnThrowable();

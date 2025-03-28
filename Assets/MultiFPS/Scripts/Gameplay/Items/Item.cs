@@ -11,14 +11,13 @@ namespace MultiFPS.Gameplay
     [RequireComponent(typeof(SphereCollider))]
     [RequireComponent(typeof(BoxCollider))]
     [RequireComponent(typeof(ModelSticker))]
-    [RequireComponent(typeof(NetworkTransform))]
     [DisallowMultipleComponent]
 
     /// <summary>
     /// Base class for all items in the game
     /// </summary>  
     [AddComponentMenu("MultiFPS/Items/Item")]
-    public class Item : NetworkBehaviour
+    public class Item : MonoBehaviour
     {
         /// <summary>
         /// its only for inventory system placed on player to check if it already has that item
@@ -284,21 +283,21 @@ namespace MultiFPS.Gameplay
 
             _myOwner.CharacterItemManager.StartUsingItem();
 
-            if (isOwned || (_myOwner.BOT && isServer))
-            {
-                Collider[] col = GetHealthsInMeleeRange();
-                for (int i = 0; i < col.Length; i++)
-                {
-                    Health health = col[i].gameObject.GetComponent<Health>();
-                    if (!health) continue;
-                    if (health == _myOwner) continue;
-
-                    //if (isOwned)
-                        //CmdHitMelee(health);
-                    //else
-                    //    health.Server_ChangeHealthState(_meleeDamage, 0, AttackType.melee, _myOwner.netId, _meleeAttackForce);
-                }
-            }
+            //if (isOwned || (_myOwner.BOT && isServer))
+            //{
+            //    Collider[] col = GetHealthsInMeleeRange();
+            //    for (int i = 0; i < col.Length; i++)
+            //    {
+            //        Health health = col[i].gameObject.GetComponent<Health>();
+            //        if (!health) continue;
+            //        if (health == _myOwner) continue;
+            //
+            //        //if (isOwned)
+            //            //CmdHitMelee(health);
+            //        //else
+            //        //    health.Server_ChangeHealthState(_meleeDamage, 0, AttackType.melee, _myOwner.netId, _meleeAttackForce);
+            //    }
+            //}
 
             if (_myOwner.BOT && !_myOwner)
                 print($"Tak {gameObject.name}");
@@ -323,12 +322,12 @@ namespace MultiFPS.Gameplay
             return Physics.OverlapSphere(_myOwner.FPPLook.position + _myOwner.FPPLook.forward * 1f, 1.2f, GameManager.characterLayer);
         }
 
-        [Command]
+        //[Command]
         void CmdMelee() 
         {
             RpcMeelee();
         }
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         void RpcMeelee() 
         {
                 Meele();
@@ -493,10 +492,10 @@ namespace MultiFPS.Gameplay
                 if(!_myOwner.BOT)
                     Meele();
 
-                if (isServer)
-                    RpcMeelee();
-                else
-                    CmdMelee();
+                //if (isServer)
+                //    RpcMeelee();
+                //else
+                //    CmdMelee();
             }
         }
 
@@ -510,29 +509,29 @@ namespace MultiFPS.Gameplay
         {
             if (!_myOwner) return;
 
-            if (isOwned)
-            {
-                SingleUse(); //for client to for example immediately see muzzleflash when he fires his gun
-                CmdSingleUse();
-            }
-            else if (isServer)
-            {
-                SingleUse();
-                RpcSingleUse();
-            }
+            //if (isOwned)
+            //{
+            //    SingleUse(); //for client to for example immediately see muzzleflash when he fires his gun
+            //    CmdSingleUse();
+            //}
+            //else if (isServer)
+            //{
+            //    SingleUse();
+            //    RpcSingleUse();
+            //}
         }
         //alternate fire mode for method above
         protected virtual void SecondaryUse()
         {
-            if (isOwned) 
-            {
-                SingleSecondaryUse(); //for client to for example immediately see muzzleflash when he fires his gun
-                CmdSingleSecondaryUse();
-            }else if (isServer)
-            {
-                SingleSecondaryUse();
-                RpcSingleSecondaryUse();
-            }
+            //if (isOwned) 
+            //{
+            //    SingleSecondaryUse(); //for client to for example immediately see muzzleflash when he fires his gun
+            //    CmdSingleSecondaryUse();
+            //}else if (isServer)
+            //{
+            //    SingleSecondaryUse();
+            //    RpcSingleSecondaryUse();
+            //}
         }
 
         protected virtual bool CooldownSecondary()
@@ -542,12 +541,12 @@ namespace MultiFPS.Gameplay
         #endregion
 
         #region use callbacks
-        [Command]
+        //[Command]
         protected virtual void CmdSingleUse()
         {
             RpcSingleUse();
         }
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         protected virtual void RpcSingleUse()
         {
             if (_myOwner)
@@ -571,12 +570,12 @@ namespace MultiFPS.Gameplay
         #endregion
 
         #region secondary use callbacks
-        [Command]
+        //[Command]
         protected virtual void CmdSingleSecondaryUse()
         {
             RpcSingleSecondaryUse();
         }
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         protected virtual void RpcSingleSecondaryUse()
         {
             SingleSecondaryUse();
@@ -611,13 +610,13 @@ namespace MultiFPS.Gameplay
 
             SetInteractable(false);
 
-            if (isServer && DestroyCoroutine != null)
-            {
-                StopCoroutine(DestroyCoroutine);
-                DestroyCoroutine = null;
-            }
+            //if (isServer && DestroyCoroutine != null)
+            //{
+            //    StopCoroutine(DestroyCoroutine);
+            //    DestroyCoroutine = null;
+            //}
 
-            _networkTransform.enabled = false;
+            //_networkTransform.enabled = false;
 
         }
 
@@ -641,10 +640,10 @@ namespace MultiFPS.Gameplay
             _myOwner = null;
 
             //initialize self destruct coroutine to prevent excessive number of items in game world
-            if (isServer)
-            {
-                DestroyCoroutine = StartCoroutine(CountToDestroy());
-            }
+            //if (isServer)
+            //{
+            //    DestroyCoroutine = StartCoroutine(CountToDestroy());
+            //}
 
             _networkTransform.enabled = true;
         }
@@ -662,7 +661,7 @@ namespace MultiFPS.Gameplay
         /// <summary>
         /// client request to damage someone that he hitted
         /// </summary>
-        [Command]
+        //[Command]
         protected void CmdDamage(uint hittedHealthID, CharacterPart hittedPart, float damagePercentage, AttackType attackType)
         {
             if (Server_CurrentAmmo > 0)
@@ -760,7 +759,7 @@ namespace MultiFPS.Gameplay
                 RpcSetSkin(selectedSkins[i]);
             }
         }
-        [ClientRpc]
+        //[ClientRpc]
         void RpcSetSkin(int selectedSkinID)
         {
             ItemSkinContainer[] skins = ClientInterfaceManager.Instance.ItemSkinContainers;
@@ -817,7 +816,7 @@ namespace MultiFPS.Gameplay
 
         }
 
-        [ClientRpc]
+        //[ClientRpc]
         void RpcReceiveAmmo(int finalAmount, int amountTaken) 
         {
             CurrentAmmoSupply = finalAmount;

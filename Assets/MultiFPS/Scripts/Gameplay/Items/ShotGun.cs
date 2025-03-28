@@ -32,13 +32,13 @@ namespace MultiFPS.Gameplay
 
             if (_myOwner.ReadActionKeyCode(ActionCodes.Trigger1) && CurrentAmmo > 0)
             {
-                if (isOwned) //client
-                {
-                    _clientCancelReload = true;
-                    CmdCancelReload();
-                }
-                else //bot
-                    _cancelReload = true;
+                //if (isOwned) //client
+                //{
+                //    _clientCancelReload = true;
+                //    CmdCancelReload();
+                //}
+                //else //bot
+                //    _cancelReload = true;
             }
         }
 
@@ -56,8 +56,8 @@ namespace MultiFPS.Gameplay
                 hitscans.SetValue(FireHitscan(), i);
             }
 
-            if (isOwned)
-                MultipleShoot(hitscans);
+            //if (isOwned)
+            //    MultipleShoot(hitscans);
 
             if (_myOwner.BOT) //server
             {
@@ -70,21 +70,21 @@ namespace MultiFPS.Gameplay
             _firePoint.localRotation = Quaternion.identity;
 
 
-            if (isOwned)
-            {
-                SingleUse(); //for client to for example immediately see muzzleflash when he fires his gun
-                CmdSingleUse();
-            }
-            else if (isServer)
-            {
-                SingleUse();
-                RpcSingleUse();
-            }
+            //if (isOwned)
+            //{
+            //    SingleUse(); //for client to for example immediately see muzzleflash when he fires his gun
+            //    CmdSingleUse();
+            //}
+            //else if (isServer)
+            //{
+            //    SingleUse();
+            //    RpcSingleUse();
+            //}
 
             ChangeCurrentAmmoCount(CurrentAmmo - 1);
         }
 
-        [Command]
+        //[Command]
         void CmdMultipleShoot(HitscanFireInfo[] info)
         {
             if (Server_CurrentAmmo > 0)
@@ -96,7 +96,7 @@ namespace MultiFPS.Gameplay
 
         //dont want to launch this method for client who took a shoot because
         //he already launched it locally
-        [ClientRpc(includeOwner = false)]
+        //[ClientRpc(includeOwner = false)]
         void RpcMultipleShoot(HitscanFireInfo[] info)
         {
             //there can be a situation when client receice a message to use item when it is already dropped, so
@@ -236,7 +236,7 @@ namespace MultiFPS.Gameplay
                 _cancelReload = false;
             }
         }
-        [Command]
+        //[Command]
         void CmdCancelReload() 
         {
             _cancelReload = true;
